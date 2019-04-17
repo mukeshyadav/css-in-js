@@ -1,4 +1,3 @@
-### styling any component
-
+### creating mixins or helpers
 
 
