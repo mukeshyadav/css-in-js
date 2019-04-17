@@ -1,3 +1,3 @@
-### creating mixins or helpers
+### using with existing libraries, bootstrap
 
 

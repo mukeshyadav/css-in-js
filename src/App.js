@@ -40,6 +40,7 @@ export default class App extends Component {
           <Navigation>
             <StyledLink to="/button">Button</StyledLink>
             <StyledLink to="/card">Card</StyledLink>
+            <StyledLink to="/alert">Alert</StyledLink>
           </Navigation>
           <PageRoutes />
         </Wrapper>
