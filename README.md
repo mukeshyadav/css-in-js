@@ -1,5 +1,4 @@
-### based on props using styles
+### styling any component
 
-### extending styles
 
 

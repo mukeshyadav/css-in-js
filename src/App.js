@@ -11,7 +11,25 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+`
+
+const Navigation = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
+`
+
+const StyledLink = styled(Link)`
+  color: brown;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: red;
+  }
 `
 
 export default class App extends Component {
@@ -19,8 +37,10 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Wrapper>
-          <Link to="/button">Button</Link>
-          <Link to="/card">Card</Link>
+          <Navigation>
+            <StyledLink to="/button">Button</StyledLink>
+            <StyledLink to="/card">Card</StyledLink>
+          </Navigation>
           <PageRoutes />
         </Wrapper>
       </BrowserRouter>
