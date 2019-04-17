@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import logo from './logo.png'
+import { BrowserRouter, Link } from "react-router-dom"
+import PageRoutes from "./routes.js"
+
 
 const Wrapper = styled.div`
   background-color: rgb(218, 163, 87);
@@ -15,10 +17,12 @@ const Wrapper = styled.div`
 export default class App extends Component {
   render () {
     return (
-      <Wrapper>
-        <img src={logo} alt='logo' />
-        <h1>CSS in JS</h1>
-      </Wrapper>
+      <BrowserRouter>
+        <Wrapper>
+          <Link to="/button">Button</Link>
+          <PageRoutes />
+        </Wrapper>
+      </BrowserRouter>
     )
   }
 }

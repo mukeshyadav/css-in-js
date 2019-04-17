@@ -1,5 +1,3 @@
-### Installing styled-components
+### using psuedoelements, psuedoselector and nesting
 
-npm install --save styled-components
 
-Writing basic styled component
