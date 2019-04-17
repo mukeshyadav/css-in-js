@@ -18,9 +18,6 @@ export default class App extends Component {
       <Wrapper>
         <img src={logo} alt='logo' />
         <h1>CSS in JS</h1>
-        <p>
-          sddsf
-        </p>
       </Wrapper>
     )
   }
