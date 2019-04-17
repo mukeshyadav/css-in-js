@@ -1,3 +1,2 @@
-### using with existing libraries, bootstrap
-
+### using global styles
 

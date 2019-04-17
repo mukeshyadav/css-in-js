@@ -1,13 +1,29 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter, Link } from "react-router-dom"
 import PageRoutes from "./routes.js"
 
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: rgb(218, 163, 87) !important;
+    height: 100vh;
+    margin: 0 !important;
+    padding: 0;
+    font: normal 16px/normal Arial, sans-serif;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    } 
+  }
+`
+
 const Wrapper = styled.div`
-  background-color: rgb(218, 163, 87);
-  font: normal 16px / normal Arial, sans-serif;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +52,7 @@ export default class App extends Component {
   render () {
     return (
       <BrowserRouter>
+        <GlobalStyle />
         <Wrapper>
           <Navigation>
             <StyledLink to="/button">Button</StyledLink>
