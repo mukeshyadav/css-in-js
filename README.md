@@ -1,3 +1,5 @@
-### using psuedoelements, psuedoselector and nesting
+### based on props using styles
+
+### extending styles
 
 

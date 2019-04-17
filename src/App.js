@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
 `
 
 export default class App extends Component {
@@ -20,6 +20,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Wrapper>
           <Link to="/button">Button</Link>
+          <Link to="/card">Card</Link>
           <PageRoutes />
         </Wrapper>
       </BrowserRouter>
