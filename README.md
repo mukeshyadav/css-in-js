@@ -1,2 +1,2 @@
-### using global styles
+### theming using styled components
 

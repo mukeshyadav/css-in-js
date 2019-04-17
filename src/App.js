@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { BrowserRouter, Link } from "react-router-dom"
 import PageRoutes from "./routes.js"
+import { THEME } from "./components/Theme.js"
 
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: rgb(218, 163, 87) !important;
+    background-color: ${props => props.theme.bg} !important;
+    color: ${props => props.theme.color};
     height: 100vh;
     margin: 0 !important;
     padding: 0;
@@ -52,15 +54,19 @@ export default class App extends Component {
   render () {
     return (
       <BrowserRouter>
-        <GlobalStyle />
-        <Wrapper>
-          <Navigation>
-            <StyledLink to="/button">Button</StyledLink>
-            <StyledLink to="/card">Card</StyledLink>
-            <StyledLink to="/alert">Alert</StyledLink>
-          </Navigation>
-          <PageRoutes />
-        </Wrapper>
+        <ThemeProvider theme={THEME.dark}>
+          <React.Fragment>
+          <GlobalStyle />
+          <Wrapper>
+            <Navigation>
+              <StyledLink to="/button">Button</StyledLink>
+              <StyledLink to="/card">Card</StyledLink>
+              <StyledLink to="/alert">Alert</StyledLink>
+            </Navigation>
+            <PageRoutes />
+          </Wrapper>
+          </React.Fragment>
+        </ThemeProvider>
       </BrowserRouter>
     )
   }
